@@ -1,35 +1,25 @@
-# pymongo-api
+## Общие сведения
 
-## Как запустить
+Данный репозиторий содержит в себе решение 10 заданий 4 спринта.
 
-Запускаем mongodb и приложение
+## Структура
 
-```shell
-docker compose up -d
-```
+**Все схемы**, реализованные в Draw.io, расположены в директории [schemas](./shemas/):
+- [Задание 1](./schemas/task1.drawio)
+- [Задание 5](./schemas/task5.drawio)
+- [Задание 6](./schemas/task6.drawio)
 
-Заполняем mongodb данными
+*Примечание: Файлы могут содержать несколько вкладок.*
 
-```shell
-./scripts/mongo-init.sh
-```
+**Все архитектурные документы** расположены в директории [docs](./docs/):
+- [Задание 7](./docs/MongoDB%20collections%20and%20sharding%20strategy.md)
+- [Задание 8](./docs/Identification%20and%20elimination%20of%20hot%20shards.md)
+- [Задание 9](./docs/Replication%20and%20sharding%20strategies.md)
+- [Задание 10](./docs/Migration%20to%20Cassandra:%20data%20model,%20replication%20and%20sharding%20strategies.md)
 
-## Как проверить
+**Остальные директории** соответствуют требованиям каждого конкретного задания:
+- [Задание 2](./mongo-sharding/)
+- [Задание 3](./mongo-sharding-repl/)
+- [Задание 4](./cassandra-sharding-repl-cache/)
 
-### Если вы запускаете проект на локальной машине
-
-Откройте в браузере http://localhost:8080
-
-### Если вы запускаете проект на предоставленной виртуальной машине
-
-Узнать белый ip виртуальной машины
-
-```shell
-curl --silent http://ifconfig.me
-```
-
-Откройте в браузере http://<ip виртуальной машины>:8080
-
-## Доступные эндпоинты
-
-Список доступных эндпоинтов, swagger http://<ip виртуальной машины>:8080/docs
+**Вариант для проверки реализации** находится в директории [sharding-repl-cache](./sharding-repl-cache/), он содержит отдельный [README.md](./sharding-repl-cache/README.md) с инструкциями по запуску, инициализации и проверке реализации.
